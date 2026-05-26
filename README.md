@@ -16,6 +16,8 @@ Yes, it synchronises my water bottle to my home automation system.
 
 The HidrateSpark mobile app is fine, but if you live in Home Assistant you want the bottle's data on the wall, in dashboards, and driving automations. This bridge runs on a Linux box near your bottle (a Pi, an Intel NUC, anything with Bluetooth) and turns the bottle into a normal MQTT device — no cloud, no phone required, no Garmin watch.
 
+Since building this, I have ported it over to be a [Home Assistant](https://github.com/loryanstrant/HA-HidrateSpark-Bluetooth-Proxy) integration that utilises ESPHome Bluetooth proxy devices, meaning the bottle can sync from anywhere in the house - not just within range of the PC that runs this bridge.
+
 It is a from-scratch reimplementation that:
 
 - **Performs the proper BLE handshake** (13-step sequence borrowed from [maxperron/HydroSync](https://github.com/maxperron/HydroSync)) so the bottle actually streams data instead of going silent.
